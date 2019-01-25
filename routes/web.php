@@ -27,3 +27,7 @@ Route::get('/dealers', function() {
 
 // Email
 Route::post('/mail/send', 'MailController@send');
+
+// Test
+Route::get('/instagram', 'IndexController@instagram');
+Route::get('/instagram2', 'IndexController@instagram2');
