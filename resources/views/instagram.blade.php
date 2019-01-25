@@ -30,6 +30,5 @@ $token = '1131213721.2e4637a.0cc121304a1f46c5a65ec1ad3b4045ef';
 $imgs= getInstagramFeeds($token);
 
 echo json_encode($imgs);
-//echo "<img src=".$imgs[0][1].">";
 
 ?>

@@ -5,15 +5,19 @@
 
 
 	<div class="container"> <!-- container -> footer  -->
-		 	<div class="row">
+		 	<div class="row social-instagram">
 		 		<div class="col-12 col-md-6">
 
-			 			<div class="d-flex">
+			 			<div class="d-flex social-img">
+			 				<!--img ng-show="<%!isUndefinedOrNull(instagramFeed[0][1])%>" src="img/insta1.png"-->
 			 				<img ng-src="<%instagramFeed[0][1]%>">
+			 				<!--img ng-show="<%!isUndefinedOrNull(instagramFeed[1][1])%>" src="img/insta2.png"-->
 			 				<img ng-src="<%instagramFeed[1][1]%>">
 						</div>
-						<div class="d-flex">
+						<div class="d-flex social-img">
+							<img ng-show="<%!isUndefinedOrNull(instagramFeed[2][1])%>" src="img/insta3.png">
 			 				<img ng-src="<%instagramFeed[2][1]%>">
+			 				<img ng-show="<%!isUndefinedOrNull(instagramFeed[3][2])%>" src="img/insta4.png">
 			 				<img ng-src="<%instagramFeed[3][1]%>">
 			 			</div>
 

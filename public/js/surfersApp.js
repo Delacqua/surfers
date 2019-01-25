@@ -115,5 +115,9 @@ angular.module('surfersApp')
 		$scope.formEmail = false;
 	}
 
+  $scope.isUndefinedOrNull = function(val) {
+    return angular.isUndefined(val) || val === null 
+  }
+
 });
 
