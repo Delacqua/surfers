@@ -55,16 +55,30 @@ angular.module('surfersApp')
 	}
 
 
-	angular.consultaDB = function (url) {
+	angular.consultaDB = function () {
 
-      $getDB.async(url).then(function(response) {
+      var urlProdutos = "/produtosJ";
+      var urlInsta = "/instagram";
+
+      $getDB.async(urlProdutos).then(function(response) {
             var temp = response;
             $scope.products = angular.stringToArrayObjs(temp);
             $scope.card = temp[0];
-      });
+        });
+
+
+      $getDB.async(urlInsta).then(function(response) {
+            var temp = response;
+            $scope.instagramFeed = temp;
+        });
+
   	}
 
+
+
+
 	angular.consultaDB("/produtosJ");
+
 	$scope.page = 1;
 	$scope.destra = false;
 	$scope.sinitra = false;

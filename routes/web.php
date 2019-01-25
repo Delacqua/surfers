@@ -2,6 +2,7 @@
 
 //main
 Route::get('/', 'IndexController@main' );
+Route::get('/instagram', 'IndexController@instagram');
 
 
 //Tutti i prodotti
@@ -29,5 +30,5 @@ Route::get('/dealers', function() {
 Route::post('/mail/send', 'MailController@send');
 
 // Test
-Route::get('/instagram', 'IndexController@instagram');
+
 Route::get('/instagram2', 'IndexController@instagram2');

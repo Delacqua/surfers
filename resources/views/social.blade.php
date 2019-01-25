@@ -9,12 +9,12 @@
 		 		<div class="col-12 col-md-6">
 
 			 			<div class="d-flex">
-							<img src="img/insta1.png">
-							<img src="img/insta2.png">
+			 				<img ng-src="<%instagramFeed[0][1]%>">
+			 				<img ng-src="<%instagramFeed[1][1]%>">
 						</div>
 						<div class="d-flex">
-							<img src="img/insta3.png">
-			 				<img src="img/insta4.png">
+			 				<img ng-src="<%instagramFeed[2][1]%>">
+			 				<img ng-src="<%instagramFeed[3][1]%>">
 			 			</div>
 
 			 			<a class="instagram d-flex align-self-center">
