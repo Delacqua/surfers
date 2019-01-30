@@ -1,17 +1,25 @@
 <section id="social" class="social" ng-controller="products">
 
-
 	<div class="social-bg"></div>
 
-
 	<div class="container"> <!-- container -> footer  -->
+
+			<div class="row">
+		 		<div class="col-sm-12 col-md-6">
+	 				 <div class="social-bg-text">
+						<img src="/img/instagram.svg" alt="Instagram" class="scale">
+					</div>		 			
+		 		</div>				
+			</div>
+
 		 	<div class="row social-instagram">
+
 		 		<div class="col-12 col-md-6">
 
 			 			<div class="d-flex social-img">
-			 				<!--img ng-show="<%!isUndefinedOrNull(instagramFeed[0][1])%>" src="img/insta1.png"-->
+			 				<img ng-show="<%!isUndefinedOrNull(instagramFeed[0][1])%>" src="img/insta1.png">
 			 				<img ng-src="<%instagramFeed[0][1]%>">
-			 				<!--img ng-show="<%!isUndefinedOrNull(instagramFeed[1][1])%>" src="img/insta2.png"-->
+			 				<img ng-show="<%!isUndefinedOrNull(instagramFeed[1][1])%>" src="img/insta2.png">
 			 				<img ng-src="<%instagramFeed[1][1]%>">
 						</div>
 						<div class="d-flex social-img">
@@ -51,7 +59,6 @@
 						    	<div class="row">
 							        <div class="form-group col-6">
 							             <select class="form-control" name="place" ng-model="mail.place">
-							             	<option value="Birth Place"></option>
 							                <option value="AL">Alabama</option>
 							                <option value="AK">Alaska</option>
 							                <option value="AZ">Arizona</option>

@@ -3,6 +3,48 @@ body {
 	height: 100%;
 }
 
+/** no gutter Row **/
+.no-gutter > [class*='col-'] {
+    padding-right:0;
+    padding-left:0;
+}
+
+/** no gutter Col **/
+.no-gutter {
+    padding-right:0;
+    padding-left:0;
+}
+
+header {
+	position: relative;
+	z-index: 1;
+}
+
+section {
+	margin-top: 3em;
+}
+
+nav {
+	padding-top: 3em;
+}
+
+.scale {
+	width: 100%;
+	height: 100%;
+	object-fit: scale-down;
+}
+
+input[type=number] { 
+  -moz-appearance: textfield;
+  appearance: textfield;
+  margin: 0; 
+}
+
+input[type=number]::-webkit-inner-spin-button, 
+input[type=number]::-webkit-outer-spin-button { 
+      -webkit-appearance: none; 
+      margin: 0; 
+}
 
 /** Header **/
 .bgHeader {
@@ -19,25 +61,17 @@ body {
 	z-index: 0;
 }
 
-header {
-	position: relative;
-	z-index: 1;
-}
-
-section {
-	margin-top: 3em;
-}
-
-nav {
-	padding-top: 3em;
-}
-
 .navbar-brand {
 	font-family: $font-Montserrat;
 	color: $dark-color;
-	font-size: 2em;
+	font-size: 1.5em;
 	font-weight: bolder;
 }
+
+@media(min-width: 992px) {
+	.navbar-brand { font-size: 2em; }
+}
+
 
 .navbar-nav {
 	width: 50%;
@@ -115,18 +149,6 @@ nav {
 
 
 /** Products **/
-
-/** no gutter Row **/
-.no-gutter > [class*='col-'] {
-    padding-right:0;
-    padding-left:0;
-}
-
-/** no gutter Col **/
-.no-gutter {
-    padding-right:0;
-    padding-left:0;
-}
 
 .products {
 	margin-top: 150px;	
@@ -322,34 +344,15 @@ nav {
 
 .products-all a { border-bottom: 2px solid $primary-color; }
 
-#background{
-    position:absolute;
-    z-index:0;
-    height: 100%;
-    width: 100%;
-    background-color: red;
-    overflow: hidden;
+.products-bg-text {
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	right: 0;
 }
 
-#bg-text {
-	position: absolute;
-	top: 0;
-	left: 0;
-    color:lightgrey;
-    font-size:400%;
-    transform:rotate(270deg);
-    -webkit-transform:rotate(270deg);
-}
-
-.text {
-	position: absolute;
-	top: 100%;
-	right: -22%;
-	transform: rotate(270deg);
-	transform-origin: left top 0;
-	font-size: 80px;
-	opacity: 0.2;
-	padding: 0;
+.products-bg-text img {
+	object-position: 100% 100%;
 }
 
 /** About Us **/
@@ -358,16 +361,27 @@ nav {
 	margin-top: 6em;
 	height: 100%;
 	width: 100%;
+}
 
+.about-bg-text {
+	position: relative;
+}
+
+.about-bg-text img {
+	object-position: 0 0 ;
+}
+
+.aboutus-sfondo {
+	height: 100%;
+	width: 100%;
 	background-image: url(/img/sfondoa.jpg);
 	background-repeat: no-repeat;
 	background-size: cover;
 	background-position: 100%;
-
 	z-index: 0;
 }
 
-.aboutus-sfondo {
+.aboutus-sfondo-bianco {
 	position: relative;
 	top: 50%;
 	width: 50%;
@@ -418,7 +432,11 @@ nav {
     width: 100%;
     height: 0;
     padding-bottom: 56.25%;
+	-webkit-box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.17);
+	-moz-box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.17);
+	box-shadow: 10px 10px 21px 3px rgba(0,0,0,0.17);
 }
+
 .video {
     position: absolute;
     top: 0;
@@ -431,7 +449,7 @@ nav {
 
 .social {
 	width: 100%;
-	margin-top: 300px;
+	margin-top: 400px;
 	background-color: transparent;
 	padding-bottom: 20px;
 }
@@ -449,6 +467,14 @@ nav {
 }
 
 .social-bg {
+}
+
+.social-bg-text {
+	position: relative;
+}
+
+.social-bg-text img {
+	object-position: 0 0 ;
 }
 
 .instagram {

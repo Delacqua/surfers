@@ -33,6 +33,11 @@
 
 		 		<div class="col-12 col-md-5 sfondoDescription">
 
+		 			<div class="products-bg-text">
+						<img src="/img/boards.svg" alt="Boards" class="scale">
+					</div>
+
+
 		 			<div class="row description-destra">
 
 		 				<div class="col-9" >

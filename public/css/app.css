@@ -11444,19 +11444,18 @@ body {
   height: 100%;
 }
 
-/** Header **/
+/** no gutter Row **/
 
-.bgHeader {
-  position: absolute;
-  height: 100%;
-  width: 100%;
-  background-image: url(/img/sfondoh.jpg);
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), to(white)), url(/img/sfondoh.jpg);
-  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white), url(/img/sfondoh.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  z-index: 0;
+.no-gutter > [class*='col-'] {
+  padding-right: 0;
+  padding-left: 0;
+}
+
+/** no gutter Col **/
+
+.no-gutter {
+  padding-right: 0;
+  padding-left: 0;
 }
 
 header {
@@ -11472,11 +11471,52 @@ nav {
   padding-top: 3em;
 }
 
+.scale {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: scale-down;
+     object-fit: scale-down;
+}
+
+input[type=number] {
+  -moz-appearance: textfield;
+  -webkit-appearance: textfield;
+          appearance: textfield;
+  margin: 0;
+}
+
+input[type=number]::-webkit-inner-spin-button,
+input[type=number]::-webkit-outer-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/** Header **/
+
+.bgHeader {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background-image: url(/img/sfondoh.jpg);
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(255, 255, 255, 0)), color-stop(rgba(255, 255, 255, 0)), to(white)), url(/img/sfondoh.jpg);
+  background: linear-gradient(rgba(255, 255, 255, 0), rgba(255, 255, 255, 0), white), url(/img/sfondoh.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  z-index: 0;
+}
+
 .navbar-brand {
   font-family: "Montserrat", sans-serif;
   color: #000000;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bolder;
+}
+
+@media (min-width: 992px) {
+  .navbar-brand {
+    font-size: 2em;
+  }
 }
 
 .navbar-nav {
@@ -11576,20 +11616,6 @@ nav {
 }
 
 /** Products **/
-
-/** no gutter Row **/
-
-.no-gutter > [class*='col-'] {
-  padding-right: 0;
-  padding-left: 0;
-}
-
-/** no gutter Col **/
-
-.no-gutter {
-  padding-right: 0;
-  padding-left: 0;
-}
 
 .products {
   margin-top: 150px;
@@ -11802,42 +11828,36 @@ nav {
   border-bottom: 2px solid #00b0ff;
 }
 
-#background {
+.products-bg-text {
   position: absolute;
-  z-index: 0;
-  height: 100%;
   width: 100%;
-  background-color: red;
-  overflow: hidden;
+  height: 100%;
+  right: 0;
 }
 
-#bg-text {
-  position: absolute;
-  top: 0;
-  left: 0;
-  color: lightgrey;
-  font-size: 400%;
-  transform: rotate(270deg);
-  -webkit-transform: rotate(270deg);
-}
-
-.text {
-  position: absolute;
-  top: 100%;
-  right: -22%;
-  -webkit-transform: rotate(270deg);
-          transform: rotate(270deg);
-  -webkit-transform-origin: left top 0;
-          transform-origin: left top 0;
-  font-size: 80px;
-  opacity: 0.2;
-  padding: 0;
+.products-bg-text img {
+  -o-object-position: 100% 100%;
+     object-position: 100% 100%;
 }
 
 /** About Us **/
 
 .aboutus {
   margin-top: 6em;
+  height: 100%;
+  width: 100%;
+}
+
+.about-bg-text {
+  position: relative;
+}
+
+.about-bg-text img {
+  -o-object-position: 0 0;
+     object-position: 0 0;
+}
+
+.aboutus-sfondo {
   height: 100%;
   width: 100%;
   background-image: url(/img/sfondoa.jpg);
@@ -11847,7 +11867,7 @@ nav {
   z-index: 0;
 }
 
-.aboutus-sfondo {
+.aboutus-sfondo-bianco {
   position: relative;
   top: 50%;
   width: 50%;
@@ -11934,6 +11954,8 @@ nav {
   width: 100%;
   height: 0;
   padding-bottom: 56.25%;
+  -webkit-box-shadow: 10px 10px 21px 3px rgba(0, 0, 0, 0.17);
+  box-shadow: 10px 10px 21px 3px rgba(0, 0, 0, 0.17);
 }
 
 .video {
@@ -11948,7 +11970,7 @@ nav {
 
 .social {
   width: 100%;
-  margin-top: 300px;
+  margin-top: 400px;
   background-color: transparent;
   padding-bottom: 20px;
 }
@@ -11965,6 +11987,15 @@ nav {
     background: -webkit-gradient(linear, left bottom, left top, color-stop(20%, #000000), color-stop(20%, white));
     background: linear-gradient(to top, #000000 20%, white 20%);
   }
+}
+
+.social-bg-text {
+  position: relative;
+}
+
+.social-bg-text img {
+  -o-object-position: 0 0;
+     object-position: 0 0;
 }
 
 .instagram {
